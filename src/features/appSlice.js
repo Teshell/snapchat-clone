@@ -5,11 +5,11 @@ const initialState = {
 };
 
 export const appSlice = createSlice({
-  name: "counter",
+  name: "app",
   initialState,
   reducers: {},
 });
 
-export const selectCount = (state) => state.counter.value;
+export const selectApp = (state) => state.app.value;
 
 export default appSlice.reducer;
