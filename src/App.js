@@ -7,12 +7,14 @@ import WebcamCapture from "./components/WebcamCapture";
 
 function App() {
   return (
-    <div className="app__body">
+    <div className="app">
       <Router>
-        <Routes>
-          <Route exact path="/" element={<WebcamCapture />} />
-          <Route exact path="/preview" element={<Preview />} />
-        </Routes>
+        <div className="app__body">
+          <Routes>
+            <Route exact path="/" element={<WebcamCapture />} />
+            <Route exact path="/preview" element={<Preview />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

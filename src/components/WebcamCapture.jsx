@@ -7,6 +7,8 @@ import Webcam from "react-webcam";
 import { setCameraImage } from "../features/cameraSlice";
 import { useNavigate } from "react-router-dom";
 
+import "./WebcamCapture.css";
+
 const videoContraints = {
   width: 250,
   height: 400,
@@ -37,7 +39,7 @@ const WebcamCapture = () => {
       />
 
       <RadioButtonUncheckedIcon
-        className="wbecamCapture__button"
+        className="webcamCapture__button"
         onClick={capture}
       />
     </div>
