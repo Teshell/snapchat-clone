@@ -61,7 +61,7 @@ const Preview = () => {
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
 
-            navigate("/chats");
+            navigate("/chats", { replace: true });
           });
       }
     );
