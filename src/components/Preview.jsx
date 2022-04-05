@@ -17,6 +17,7 @@ import { v4 as uuid } from "uuid";
 
 import firebase from "firebase/compat/app";
 import { storage, db } from "../firebase";
+import { selectUser } from "../features/appSlice";
 
 import "./Preview.css";
 
@@ -24,6 +25,7 @@ const Preview = () => {
   const cameraImage = useSelector(selectCameraImage);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
   useEffect(() => {
     if (!cameraImage) {
@@ -57,7 +59,7 @@ const Preview = () => {
               imageUrl: url,
               username: "Teshell",
               read: false,
-              //   profilePic
+              profilePic: user.profilePic,
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
 
